@@ -9,6 +9,7 @@
  You are given two linked lists representing two non-negative numbers. 
  The digits are stored in reverse order and each of their nodes contain a single digit. 
  Add the two numbers and return it as a linked list.
+ 
  Input: (2 -> 4 -> 3) + (5 -> 6 -> 4)
  Output: 7 -> 0 -> 8
  Solution: dummy head...
@@ -30,19 +31,27 @@ public class AddTwoNumbers {
 	public ListNode Solution(ListNode l1, ListNode l2){
 		ListNode sumNode = new ListNode(0);
 		ListNode headNode = sumNode;
+	    int carry = 0;
 		
-		while(l1.next != null && l2.next != null)
+		while(l1 != null || l2 != null || carry != 0)
 		{
-			int value1 = l1.val;
-			int value2 = l2.val;
-			int sum = value1 + value2;
+			int originSumValue = carry;		
+			if(l1 != null)
+			{
+				originSumValue += l1.val;
+				l1 = l1.next;
+			}
+			if(l2 != null)
+			{
+				originSumValue += l2.val;
+				l2 = l2.next;
+			}			
 			
+			carry = originSumValue / 10;
+			int sum = originSumValue % 10;			
 			ListNode addNode = new ListNode(sum);
-			sumNode.next = addNode;
-			
-			sumNode = sumNode.next;
-			l1 = l1.next;
-			l2 = l2.next;
+			sumNode.next = addNode;			
+			sumNode = sumNode.next;						
 		}
 		
 		return headNode.next;

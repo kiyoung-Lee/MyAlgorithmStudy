@@ -6,23 +6,40 @@
 public class CompareString {
 	public boolean SameTest(String s1, String s2)
 	{
-		String big = s1.length() > s2.length() ? s1 : s2;
-		String small = s1.length() < s2.length() ? s1 : s2;
-		
-		int originCount = big.length();
-		int changeCount = 0;
-		
-		String[] splitArray = small.split("");
-		
-		for(int i = 0; i < splitArray.length; i++)
+		String big = s1.length() >= s2.length() ? s1 : s2;
+		String small = s1.length() >= s2.length() ? s2 : s1;
+
+		int bigCount = big.length();
+		int smallCount = small.length();
+		boolean isChange = false;
+	    int changeIdx = 0;
+		int matchCount = 0;
+
+		for(int i = 0; i < smallCount; i++)
 		{
-			if(big.contains(splitArray[i]))
-				changeCount ++;
+		    changeIdx = i;
+		    if(isChange)
+		        changeIdx = i + 1;
+
+		    if(big.charAt(changeIdx) == small.charAt(i))
+		    {
+		        matchCount ++;
+		    }
+		    else if((bigCount != smallCount) && (!isChange))
+		    {
+		        isChange = true;
+		        changeIdx = i + 1;
+
+		        if(big.charAt(changeIdx) == small.charAt(i))
+		            matchCount ++;
+		    }
 		}
-		
-		if(Math.abs(originCount - changeCount) == 1)
-			return true;
+
+		if(bigCount > smallCount)
+		    return (matchCount == smallCount);
+		else if (bigCount == smallCount)
+		    return (matchCount >= smallCount - 1);
 		else
-			return false;
+		    return false;
 	}
 }
