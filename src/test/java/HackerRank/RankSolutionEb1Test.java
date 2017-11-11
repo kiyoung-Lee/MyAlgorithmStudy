@@ -1,15 +1,17 @@
+package HackerRank;
+
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
-public class Ebay1Test {
+public class RankSolutionEb1Test {
 
-    private Ebay1 solution;
+    private RankSolution_Eb1 solution;
 
     @Before
     public void setUp(){
-        solution = new Ebay1();
+        solution = new RankSolution_Eb1();
     }
 
     @Test
@@ -17,7 +19,7 @@ public class Ebay1Test {
         String[] playList = {"hi", "ho", "hello", "hello"};
         int k = 0;
         String findName = "hello";
-        int result = Ebay1.playlist(playList, k, findName);
+        int result = RankSolution_Eb1.playlist(playList, k, findName);
         assertEquals(result, 1);
     }
 

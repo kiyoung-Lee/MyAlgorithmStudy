@@ -1,4 +1,6 @@
-public class Ebay1 {
+package HackerRank;
+
+public class RankSolution_Eb1 {
 
 
     static int playlist(String[] songs, int k, String q) {

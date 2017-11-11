@@ -1,6 +1,11 @@
-import java.util.*;
+package HackerRank;
 
-public class Kakao2 {
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
+public class RankSolution_Ka2 {
 
     private static char[] signs = {'I', 'V', 'X', 'L', 'C', 'D', 'M'};
     private static int[] values = {1, 5, 10, 50, 100, 500, 1000};

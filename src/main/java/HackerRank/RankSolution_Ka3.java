@@ -1,4 +1,6 @@
-public class Kakao3 {
+package HackerRank;
+
+public class RankSolution_Ka3 {
 
     public int counting(String s){
         String[] splitArray = s.split("");

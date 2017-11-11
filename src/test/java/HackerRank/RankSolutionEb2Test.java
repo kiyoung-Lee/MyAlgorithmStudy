@@ -1,6 +1,6 @@
-import static org.junit.Assert.*;
+package HackerRank;
 
-public class Ebay2Test {
+public class RankSolutionEb2Test {
 
 
 

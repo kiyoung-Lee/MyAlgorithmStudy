@@ -1,4 +1,6 @@
-public class Ebay2 {
+package HackerRank;
+
+public class RankSolution_Eb2 {
 
     public static class LinkedListNode{
         int val;

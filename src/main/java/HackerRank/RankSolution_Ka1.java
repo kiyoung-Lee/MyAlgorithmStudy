@@ -1,8 +1,9 @@
-import java.text.SimpleDateFormat;
+package HackerRank;
+
 import java.util.HashMap;
 import java.util.Map;
 
-public class Kakao1 {
+public class RankSolution_Ka1 {
 
     Map<String, String> dayMap = new HashMap<>();
     Map<String, String> monthMap = new HashMap<>();

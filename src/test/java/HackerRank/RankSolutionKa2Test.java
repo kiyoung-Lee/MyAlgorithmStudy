@@ -1,17 +1,19 @@
+package HackerRank;
+
 import org.junit.Before;
 import org.junit.Test;
 
 import java.util.Arrays;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
-public class Kakao2Test {
+public class RankSolutionKa2Test {
 
-    private Kakao2 kakao;
+    private RankSolution_Ka2 kakao;
 
     @Before
     public void setUp(){
-        kakao = new Kakao2();
+        kakao = new RankSolution_Ka2();
     }
 
     @Test

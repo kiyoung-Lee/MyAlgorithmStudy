@@ -1,6 +1,8 @@
+package HackerRank;
+
 import java.util.HashSet;
 
-public class Ebay4 {
+public class RankSolution_Eb3 {
 
     static int numberOfPairs(int[] a, long k) {
         long sumValue = k;
