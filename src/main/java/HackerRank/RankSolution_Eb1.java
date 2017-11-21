@@ -21,6 +21,7 @@ public class RankSolution_Eb1 {
             }
         }
 
+
         if(isFind == false) {
             for (int i = 0; i < currentPos; i++) {
                 if (songs[i].equals(findSongName)) {

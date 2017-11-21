@@ -6,27 +6,22 @@ public class TapeEquilibrium {
         // write your code in Java SE 8
 
         int arraySize = A.length;
+        int left = A[0];
+        int right = 0;
         int minSum = Integer.MAX_VALUE;
 
-        for(int i = 0; i < arraySize; i++){
-            int p = i + 1;
-            if(p < arraySize){
+        for(int i = 1; i < arraySize; i++){
+            right += A[i];
+        }
 
-                int frontSum = 0;
-                int backSum = 0;
+        minSum = Math.abs(left - right);
+        for(int q = 1 ; q < arraySize -1; q++){
+            left += A[q];
+            right -= A[q];
 
-                for(int q = 0; q < p; q++){
-                    frontSum += A[q];
-                }
-
-                for(int t = p; t < arraySize; t++){
-                    backSum += A[t];
-                }
-
-                int result = Math.abs(frontSum - backSum);
-                if(minSum > result){
-                    minSum = result;
-                }
+            int diff = Math.abs(left - right);
+            if(minSum > diff){
+                minSum = diff;
             }
         }
 
