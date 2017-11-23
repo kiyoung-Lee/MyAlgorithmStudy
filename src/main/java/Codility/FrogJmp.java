@@ -10,6 +10,12 @@ public class FrogJmp {
 
         int distance = Y - X;
 
-        return distance / D + 1;
+        int nam = distance % D;
+
+        if(nam == 0){
+            return distance / D;
+        }else {
+            return distance / D + 1;
+        }
     }
 }

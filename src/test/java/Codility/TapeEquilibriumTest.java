@@ -48,4 +48,5 @@ public class TapeEquilibriumTest {
         int result = solution.solution(array);
         assertEquals(result, 0);
     }
+
 }
