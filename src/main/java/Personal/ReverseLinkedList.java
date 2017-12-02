@@ -8,32 +8,20 @@ class Node{
 public class ReverseLinkedList {
 
     public Node getReverseLinkedList(Node input){
+        Node current = input;
+        Node temp = input;
+        Node flag = input;
 
-        // Set Header
-        Node header = new Node();
-        header.next = input;
-
-        Node flagNode = new Node();
-        flagNode.value = input.next.value;
-        flagNode.next = input.next.next;
-
-        Node currentNode = input;
-
-        while(flagNode.next != null){
-            flagNode = flagNode.next;
-
-            currentNode = currentNode.next;
-            currentNode.next = header.next;
-
-
-            currentNode = flagNode;
-
+        while(flag.next != null){
+            flag = flag.next;
+            temp = flag;
+            temp.next = current;
+            current = temp;
         }
 
-
-
-
-
+        if(current == flag){
+            return current;
+        }
 
         return null;
     }
