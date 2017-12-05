@@ -1,5 +1,6 @@
-package Personal;
+package Meeting;
 
+import Meeting.Fibonacci;
 import org.junit.Before;
 import org.junit.Test;
 
