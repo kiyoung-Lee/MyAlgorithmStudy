@@ -26,7 +26,17 @@ public class MaxCountersTest {
 
     @Test
     public void solution_Test1() throws Exception {
-        int [] param = {-1, -1, -1};
+        int [] param = {1, 1, 1, 1, 1};
+        int [] result = solution.solution(5, param);
+
+        for(int value : result){
+            System.out.println(value);
+        }
+    }
+
+    @Test
+    public void solution_Test2() throws Exception {
+        int [] param = {1,1,6, 1, 6, 1, 6, 1, 6, 1, 6};
         int [] result = solution.solution(5, param);
 
         for(int value : result){
