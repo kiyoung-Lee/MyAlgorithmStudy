@@ -35,7 +35,7 @@ public class CountDivTest {
     @Test
     public void solution_Test2() throws Exception {
         int result = solution.solution(0, 2, 3);
-        assertEquals(result, 0);
+        assertEquals(result, 1);
     }
 
     @Test
