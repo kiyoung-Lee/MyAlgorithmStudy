@@ -91,4 +91,16 @@ public class CountDivTest {
         int result = solution.solution(1, 1, 11);
         assertEquals(result, 0);
     }
+
+    @Test
+    public void solution_Test12() throws Exception {
+        int result = solution.solution(0, 2000000000, 1);
+        assertEquals(result, 2000000001);
+    }
+
+    @Test
+    public void solution_Test13() throws Exception {
+        int result = solution.solution(0, 3, 1);
+        assertEquals(result, 4);
+    }
 }
