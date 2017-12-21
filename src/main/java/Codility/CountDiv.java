@@ -9,43 +9,16 @@ public class CountDiv {
 
     public int solution(int A, int B, int K) {
         // write your code in Java SE 8
-        int result = 0;
-        int A_Result;
-        int A_Nam;
-        int B_Result;
-        int B_Nam;
 
-        A_Result = A / K;
-        A_Nam = A % K;
-        B_Result = B / K;
-        B_Nam = B % K;
+        int result = B / K + 1;
 
-        result = B_Result - A_Result;
+        if(A != 0) {
+            int rangeFlag = A / K;
 
-        if(A == B){
-            if(A % K == 1){
-                return 0;
-            }else if(A % K == 0){
-                return 1;
-            }else if(A == 0){
-                return 1;
-            }
-        }
+            if (A % K != 0)
+                rangeFlag++;
 
-        if(A_Result != 0 && B_Result != 0){
-            if(A_Nam == 1 && B_Nam != 1)
-                result ++;
-            if(A_Nam != 1 && B_Nam == 1)
-                result ++;
-            if(A_Nam == 0 && B_Nam == 0)
-                result++;
-        }
-
-        if(A == 0 && B != 0){
-            result ++;
-        }
-        if(A != 0 && B == 0){
-            result ++;
+            result = result - rangeFlag;
         }
 
         return result;
